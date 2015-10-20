@@ -11,6 +11,7 @@ Suppose a simple model, where there is a common environment (c.e.)
 z_mal = i_mal + c.e_mal + epsilon_mal
 z_fem = i_fem + c.e_fem + epsilon_fem
 
+
 WORKING SCENARIO 1
 TRUE ASSORTATIVE MATING. The common environmental effect is not correlated for the partners cov(c.e_mal, c.e_fem) = 0
 cov(i_mal, i_fem) > 0
