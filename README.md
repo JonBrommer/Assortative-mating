@@ -13,6 +13,7 @@ Question is whether one can construct the assortative mating correlation on the 
 Suppose a simple model, where there is a common environment (c.e.)
 
 z_mal = i_mal + c.e_mal + epsilon_mal
+
 z_fem = i_fem + c.e_fem + epsilon_fem
 
 
