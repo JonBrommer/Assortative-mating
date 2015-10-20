@@ -1,8 +1,11 @@
 # Assortative-mating
 
 Some R code to simulate data assuming assortative mating (phenotypic correlation between partners) arisen through 3 non-mutually exclusive processes.
+
 1. individual-specific trait values (i) of males and female are correlated between partners
+
 2. there is a common environment that affects both partners and hence creates correlated common environmental effects
+
 3. there are (reciprocal) indirect effects between the partners. 
 
 There are several hierarchical levels affecting the assortative mating correlation. Alomng the lines of earlier work partitioning the P matrix. 
