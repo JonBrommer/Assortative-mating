@@ -8,13 +8,17 @@ Some R code to simulate data assuming assortative mating (phenotypic correlation
 There are several hierarchical levels affecting the assortative mating correlation. Alomng the lines of earlier work partitioning the P matrix. 
 Question is whether one can construct the assortative mating correlation on the level of individuals 
 Suppose a simple model, where there is a common environment (c.e.)
+
 z_mal = i_mal + c.e_mal + epsilon_mal
 z_fem = i_fem + c.e_fem + epsilon_fem
 
 
 WORKING SCENARIO 1
-TRUE ASSORTATIVE MATING. The common environmental effect is not correlated for the partners cov(c.e_mal, c.e_fem) = 0
+TRUE ASSORTATIVE MATING. The common environmental effect is not correlated for the partners 
+
+cov(c.e_mal, c.e_fem) = 0
 cov(i_mal, i_fem) > 0
+
 Assuming var(i_mal), cov(i_mal,i_fem), var(i_fem) are from a multivariate normal distribution
 
 There are each year n males paired to n females. They form a pair for 3 years. Then all the females die and new females are mated to. After this pairs change, they are together for 3 years again. Then all the males die and the females remade and breed for 3 years. 
