@@ -33,21 +33,21 @@ for (m in 1:n.matings) {
 		i.mal=rnorm(n=n.pairs,mean=mean.mal,sd=sqrt(var.i.mal))
 
 		i.fem=mean.fem+(rho.i.m.f*sqrt(var.i.fem)/sqrt(var.i.mal))*(i.mal-mean.mal)
-		i.fem=rnorm(n=length(i.fem),mean=i.fem,sd=sqrt(var.i.fem))
+		i.fem=rnorm(n=length(i.fem),mean=i.fem,sd=sqrt(var.i.fem*(1-rho.i.m.f^2)))
 		#store data
 		id.n.i.mal=cbind(m,seq(1:n.pairs),i.mal)
 		id.n.i.fem=cbind(m,seq(1:n.pairs),i.fem)
 	} #if m==1
 	if (m==2) { #second mating round: all females die and are replaced by new females who mate according to assortative mating rule
 		i.fem=mean.fem+(rho.i.m.f*sqrt(var.i.fem)/sqrt(var.i.mal))*(i.mal-mean.mal)
-		i.fem=rnorm(n=length(i.fem),mean=i.fem,sd=sqrt(var.i.fem))
+		i.fem=rnorm(n=length(i.fem),mean=i.fem,sd=sqrt(var.i.fem*(1-rho.i.m.f^2)))
 		#store data
 		id.n.i.mal=rbind(id.n.i.mal,cbind(m,seq(1:n.pairs),i.mal))
 		id.n.i.fem=rbind(id.n.i.fem,cbind(m,n.pairs+seq(1:n.pairs),i.fem))
 	} #if m==3
 	if (m==3) { #third mating round: all males die and are replaced by new males who mate according to assortative mating rule
 		i.mal=mean.mal+(rho.i.m.f*sqrt(var.i.mal)/sqrt(var.i.fem))*(i.fem-mean.fem)
-		i.mal=rnorm(n=length(i.mal),mean=i.mal,sd=sqrt(var.i.mal))
+		i.mal=rnorm(n=length(i.mal),mean=i.mal,sd=sqrt(var.i.mal*(1-rho.i.m.f^2)))
 		#store data
 		id.n.i.mal=rbind(id.n.i.mal,cbind(m,n.pairs+seq(1:n.pairs),i.mal))
 		id.n.i.fem=rbind(id.n.i.fem,cbind(m,n.pairs+seq(1:n.pairs),i.fem))
