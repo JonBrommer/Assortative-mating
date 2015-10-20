@@ -1,5 +1,4 @@
 rm(list=ls())
-setwd("C:\\Users\\joegbr\\Documents\\data\\Tutkimus\\projects\\NielsDingemanse\\AssortativeMating")
 ## assortative mating
 #simulation
 #remating is implemented by having the old partners removed
